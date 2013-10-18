@@ -1,0 +1,14 @@
+
+#set root url for api rest
+http:
+  rootPath: /api/*
+
+# Create a temporary in-memory database 
+
+
+database:
+  driverClass: org.h2.Driver
+  user: todo
+  password: pass
+  url: jdbc:h2:mem:todo
+

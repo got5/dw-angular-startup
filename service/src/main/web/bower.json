@@ -1,0 +1,13 @@
+{
+  "name": "resources",
+  "version": "0.0.0",
+  "dependencies": {
+    "json3": "~3.2.4",
+    "es5-shim": "~2.0.8"
+  },
+  "devDependencies": {
+    "bootstrap": "~3.0.0",
+    "restangular": "~1.1.6",
+    "underscore": "~1.5.2"
+  }
+}
