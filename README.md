@@ -4,7 +4,7 @@ dw-angular-startup
 Usage 
 -----
 
-Skip the tests for now as they broken.
+Skip the tests for now as they are broken.
 
 	mvn clean install -DskipTests
 
@@ -38,6 +38,6 @@ Package the application
 
 In the service/src/main/web/ directory, do a : 
 
-	grunt build
+	grunt build -f
 
 Package your application like described in Usage section and you are good to go.
