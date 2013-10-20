@@ -31,7 +31,7 @@ Ok, now just launch the server with :
 
 and your application start on port 9000 with a nodejs instance. 
 
-With this configuration, you don't need to bother with live reloading in the java environnement. Indeed, there is a proxy configured to redirect all requests from localhost:9000/api to localhost:8080/api allowing you hit the Dropwizard REST API without further configuration.
+With this configuration, you don't need to bother with live reloading in the java environnement. Indeed, there is a proxy configured to redirect all requests from localhost:9000/api to localhost:8080/api allowing you to hit the Dropwizard REST API without further configuration.
 
 Package the application
 -----------------------
