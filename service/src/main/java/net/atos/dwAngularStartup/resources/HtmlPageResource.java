@@ -23,7 +23,7 @@ public class HtmlPageResource {
   public Response index() {
     String pageContent = "";
     try {
-      URL clientPage = Resources.getResource("index.html");
+      URL clientPage = Resources.getResource("app/index.html");
       pageContent = Resources.toString(clientPage, Charsets.UTF_8);
     } catch (IOException e) {
       return Response.serverError().build();

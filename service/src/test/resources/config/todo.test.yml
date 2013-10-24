@@ -1,4 +1,5 @@
-
+http:
+  rootPath: /api/*
 
 # Use a temporary in-memory database 
 

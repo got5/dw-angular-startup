@@ -8,7 +8,7 @@ Skip the tests for now as they are broken.
 
 	mvn clean install -DskipTests
 
-	java -jar service/target/service-1.0.0-SNAPSHOT.jar server todo.sample.yml 
+	java -jar service/target/service-1.0.0-SNAPSHOT.jar server todo.yml
 
 An instance of Jetty will start on port 8080.
 

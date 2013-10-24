@@ -9,7 +9,7 @@ public class TodoBuilder {
 
   private String id;
   private String title;
-  private Boolean completed;
+  private Boolean completed=false;
 
   public TodoBuilder() {
   }
@@ -30,7 +30,7 @@ public class TodoBuilder {
     return this;
   }
 
-  public TodoBuilder created(Boolean completed) {
+  public TodoBuilder completed(Boolean completed) {
     this.completed = checkNotNull(completed, "completed is null");
     return this;
   }

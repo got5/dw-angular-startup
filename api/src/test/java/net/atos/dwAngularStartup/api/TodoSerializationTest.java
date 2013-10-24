@@ -15,7 +15,7 @@ public class TodoSerializationTest {
 
 
   private final Todo TODO = Todo.newBuilder().id("Test")
-      .title("john@example.com").created(false).build();
+      .title("john@example.com").completed(false).build();
 
   @Test
   public void testSerializeToJson() throws IOException {

@@ -1,6 +1,1 @@
-{"id":"Test", "email":"john@example.com", "created":1348645333931, "items":[
-  {
-    "title":"Item 1",
-    "created":1348645333931
-  }
-]}
+{"id":"Test", "title":"john@example.com", "completed":false}

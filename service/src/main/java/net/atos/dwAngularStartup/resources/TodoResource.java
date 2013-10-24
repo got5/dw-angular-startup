@@ -30,7 +30,7 @@ public class TodoResource {
 
   public static final Todo TODO = Todo.newBuilder()
       .id(UUID.randomUUID().toString())
-      .created(false)
+      .completed(false)
       .title("procrastinate")
       .build();
 
@@ -62,7 +62,7 @@ public class TodoResource {
       id = UUID.randomUUID().toString();
     }
 
-    final TodoBuilder builder = Todo.newBuilder().id(id).created(false);
+    final TodoBuilder builder = Todo.newBuilder().id(id).completed(false);
     if (todo.getTitle() != null) {
       builder.title(todo.getTitle());
     }
