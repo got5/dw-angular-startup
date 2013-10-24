@@ -88,6 +88,49 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>1.7</version>
+                <executions>
+                    <execution>
+                        <id>exec-gen-sources</id>
+                        <phase>compile</phase>
+                        <configuration>
+                            <skip>${skipFrontBuild}</skip>
+                            <target name="building">
+                                <echo>
+                                    ---  NPM INSTALL --
+                                </echo>
+
+                                <exec executable="npm" dir="${project.basedir}/src/main/web/"
+                                       failonerror="true">
+                                    <arg line="install"/>
+                                </exec>
+                                <echo>-- BOWER INSTALL --</echo>
+
+
+                                <exec executable="bower" dir="${project.basedir}/src/main/web/"
+                                      failonerror="true">
+                                    <arg line="install --no-color" />
+                                </exec>
+
+                                <echo>
+                                    -- GRUNT  --
+                                </echo>
+
+                                <exec executable="grunt" dir="${project.basedir}/src/main/web/"
+                                      resultproperty="cmdresult">
+                                    <arg line="grunt build --no-color --force"/>
+                                </exec>
+
+                            </target>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
             
     </build>
