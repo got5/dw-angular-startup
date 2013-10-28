@@ -135,7 +135,7 @@
 
                                 <exec executable="cmd" dir="${project.basedir}"
                                       failonerror="true" osfamily="windows">
-                                    <arg line="/c grunt release --no-color --force" />
+                                    <arg line="/c grunt build --no-color --force" />
                                 </exec>
                             </target>
                         </configuration>
