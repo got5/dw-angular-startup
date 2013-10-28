@@ -107,7 +107,7 @@
                                     <arg line="install"/>
                                 </exec>
 
-                                <exec executable="cmd" dir="${project.basedir}"
+                                <exec executable="cmd" dir="${project.basedir}/src/main/web/"
                                       failonerror="true" osfamily="windows">
                                     <arg line="/c npm install" />
                                 </exec>
@@ -120,7 +120,7 @@
                                     <arg line="install --no-color" />
                                 </exec>
 
-                                <exec executable="cmd" dir="${project.basedir}"
+                                <exec executable="cmd" dir="${project.basedir}/src/main/web/"
                                       failonerror="true" osfamily="windows">
                                     <arg line="/c bower install --no-color" />
                                 </exec>
@@ -133,7 +133,7 @@
                                     <arg line="grunt build --no-color --force"/>
                                 </exec>
 
-                                <exec executable="cmd" dir="${project.basedir}"
+                                <exec executable="cmd" dir="${project.basedir}/src/main/web/"
                                       failonerror="true" osfamily="windows">
                                     <arg line="/c grunt build --no-color --force" />
                                 </exec>
