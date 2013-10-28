@@ -103,26 +103,40 @@
                                 </echo>
 
                                 <exec executable="npm" dir="${project.basedir}/src/main/web/"
-                                       failonerror="true">
+                                       failonerror="true" osfamily="unix">
                                     <arg line="install"/>
                                 </exec>
+
+                                <exec executable="cmd" dir="${project.basedir}"
+                                      failonerror="true" osfamily="windows">
+                                    <arg line="/c npm install" />
+                                </exec>
+
                                 <echo>-- BOWER INSTALL --</echo>
 
 
                                 <exec executable="bower" dir="${project.basedir}/src/main/web/"
-                                      failonerror="true">
+                                      failonerror="true" osfamily="unix">
                                     <arg line="install --no-color" />
                                 </exec>
 
+                                <exec executable="cmd" dir="${project.basedir}"
+                                      failonerror="true" osfamily="windows">
+                                    <arg line="/c bower install --no-color" />
+                                </exec>
                                 <echo>
                                     -- GRUNT  --
                                 </echo>
 
                                 <exec executable="grunt" dir="${project.basedir}/src/main/web/"
-                                      resultproperty="cmdresult">
+                                      resultproperty="cmdresult" osfamily="unix">
                                     <arg line="grunt build --no-color --force"/>
                                 </exec>
 
+                                <exec executable="cmd" dir="${project.basedir}"
+                                      failonerror="true" osfamily="windows">
+                                    <arg line="/c grunt release --no-color --force" />
+                                </exec>
                             </target>
                         </configuration>
                         <goals>
